@@ -14,6 +14,7 @@ int main() {
             c++;
         } else {
             tmp = n % 10;
+            c = 1;
         }
         if (c == 3) break;
         n /= 10;
