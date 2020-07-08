@@ -9,16 +9,14 @@ int main() {
     for (int i = 0; i < n; i++) cin >> a.at(i);
 
     sort(a.begin(), a.end());
+    reverse(a.begin(), a.end());
 
     int x = 0, y = 0;
-    bool t = true;
-    for (int i = n-1; i >= 0; i--) {
-        if (t) {
+    for (int i = 0; i < n; i++) {
+        if (i % 2 == 0) {
             x += a.at(i);
-            t = false;
         } else {
             y += a.at(i);
-            t = true;
         }
     }
 
