@@ -19,8 +19,8 @@ int main() {
         if (s[str] > max_cnt) max_cnt = s[str];
     }
 
-    for (const auto& [key, value] : s) {
-        if (value == max_cnt) cout << key << endl;
+    for (auto it = s.begin(); it != s.end(); it++) {
+        if (it->second == max_cnt) cout << it->first << endl;
     }
 
     return 0;
